@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>使用hexo搭建博客 | Summary</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="配置环境（window环境下）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用hexo搭建博客">
+<meta property="og:url" content="http://3vin.pw/2017/02/16/使用hexo搭建博客/index.html">
+<meta property="og:site_name" content="Summary">
+<meta property="og:description" content="配置环境（window环境下）">
+<meta property="og:updated_time" content="2017-02-15T16:15:10.427Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用hexo搭建博客">
+<meta name="twitter:description" content="配置环境（window环境下）">
+  
+    <link rel="alternate" href="/atom.xml" title="Summary" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Summary</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">work more and talk less</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://3vin.pw"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-使用hexo搭建博客" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/16/使用hexo搭建博客/" class="article-date">
+  <time datetime="2017-02-15T16:09:38.000Z" itemprop="datePublished">2017-02-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用hexo搭建博客
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>配置环境（window环境下）<a id="more"></a><ul>
+<li>安装Node</li>
+<li>安装Git</li>
+<li>申请GitHub</li>
+<li>安装HEXO <code>npm i -g hexo</code></li>
+<li>初始化 <code>hexo init</code></li>
+<li>生成静态页面 <code>hexo g</code></li>
+<li>本地启动 <code>hexo s</code></li>
+<li>浏览器输入 <code>http://localhost:4000</code></li>
+</ul>
+</li>
+<li><p>配置github</p>
+<ul>
+<li>建立仓库，仓库名必须为 <code>用户名.github.io</code></li>
+<li>本地修改根目录的_config.yml文件，来建立关联<ul>
+<li>在文件最下面，注意:后面有空格<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: https://github.com/用户名/用户名.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>git部署</p>
+<ul>
+<li>先下载 <code>npm i hexo-deployer-git -S</code></li>
+<li>执行配置命令 <code>hexo d</code></li>
+<li>每次部署的步骤，可按以下三步来进行</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
+<ul>
+<li>将独立域名与GitHub Pages的空间绑定<ul>
+<li>在.deploy_git根目录下新建一个名为CNAME的文本文件，里面写入你要绑定的域名，比如XXX.com</li>
+<li>点击你的github的settings，拉到下面的custom domain，填入要绑定的域名</li>
+</ul>
+</li>
+<li>空间域名可以去主机屋搞，可以申请免费空间，再买个便宜的域名就可以了</li>
+<li>DNS设置<ul>
+<li>主机记录@, 类型A, 记录值192.30.252.153</li>
+<li>主机记录www, 类型A, 记录值192.30.252.153</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>一些常用命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;postName&quot; #新建文章</div><div class="line">hexo new page &quot;pageName&quot; #新建页面</div><div class="line">hexo generate #生成静态页面至public目录</div><div class="line">hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</div><div class="line">hexo deploy #将.deploy目录部署到GitHub</div><div class="line">hexo help  #查看帮助</div><div class="line">hexo version  #查看Hexo的版本</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>让文章只显示一部分和一个阅读全文的按钮<ul>
+<li>在文章中加一个<!--more-->，<!--more-->后面的内容就不会显示出来了</li>
+</ul>
+</li>
+<li>文章在source/_posts中</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://3vin.pw/2017/02/16/使用hexo搭建博客/" data-id="ciz75mng800010woz2vykvx5t" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/02/15/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/16/使用hexo搭建博客/">使用hexo搭建博客</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/15/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Gahou<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
