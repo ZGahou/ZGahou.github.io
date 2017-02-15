@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://3vin.pw/2017/02/16/使用hexo搭建博客/index.html">
 <meta property="og:site_name" content="Summary">
 <meta property="og:description" content="配置环境（window环境下）">
-<meta property="og:updated_time" content="2017-02-15T16:15:10.427Z">
+<meta property="og:updated_time" content="2017-02-15T16:16:43.394Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo搭建博客">
 <meta name="twitter:description" content="配置环境（window环境下）">
@@ -101,25 +101,25 @@
 <li>浏览器输入 <code>http://localhost:4000</code></li>
 </ul>
 </li>
-<li><p>配置github</p>
-<ul>
+<li>配置github<ul>
 <li>建立仓库，仓库名必须为 <code>用户名.github.io</code></li>
 <li>本地修改根目录的_config.yml文件，来建立关联<ul>
-<li>在文件最下面，注意:后面有空格<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: https://github.com/用户名/用户名.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
-</li>
+<li>在文件最下面，注意:后面有空格</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>git部署</p>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repository: https://github.com/用户名/用户名.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
 <ul>
+<li>git部署<ul>
 <li>先下载 <code>npm i hexo-deployer-git -S</code></li>
 <li>执行配置命令 <code>hexo d</code></li>
 <li>每次部署的步骤，可按以下三步来进行</li>
 </ul>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
 <ul>
 <li>将独立域名与GitHub Pages的空间绑定<ul>
 <li>在.deploy_git根目录下新建一个名为CNAME的文本文件，里面写入你要绑定的域名，比如XXX.com</li>
@@ -134,9 +134,9 @@
 </li>
 </ul>
 <ul>
-<li>一些常用命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;postName&quot; #新建文章</div><div class="line">hexo new page &quot;pageName&quot; #新建页面</div><div class="line">hexo generate #生成静态页面至public目录</div><div class="line">hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</div><div class="line">hexo deploy #将.deploy目录部署到GitHub</div><div class="line">hexo help  #查看帮助</div><div class="line">hexo version  #查看Hexo的版本</div></pre></td></tr></table></figure>
-</li>
+<li>一些常用命令</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">hexo new <span class="string">"postName"</span> <span class="comment">#新建文章</span></div><div class="line">hexo new page <span class="string">"pageName"</span> <span class="comment">#新建页面</span></div><div class="line">hexo generate <span class="comment">#生成静态页面至public目录</span></div><div class="line">hexo server <span class="comment">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></div><div class="line">hexo deploy <span class="comment">#将.deploy目录部署到GitHub</span></div><div class="line">hexo <span class="built_in">help</span>  <span class="comment">#查看帮助</span></div><div class="line">hexo version  <span class="comment">#查看Hexo的版本</span></div></pre></td></tr></table></figure>
 <ul>
 <li>让文章只显示一部分和一个阅读全文的按钮<ul>
 <li>在文章中加一个<!--more-->，<!--more-->后面的内容就不会显示出来了</li>
@@ -148,7 +148,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://3vin.pw/2017/02/16/使用hexo搭建博客/" data-id="ciz75mng800010woz2vykvx5t" class="article-share-link">Share</a>
+      <a data-url="http://3vin.pw/2017/02/16/使用hexo搭建博客/" data-id="ciz762dg60001ygozftwakcvj" class="article-share-link">Share</a>
       
       
     </footer>
