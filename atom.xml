@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Summary</title>
+  <subtitle>work more and talk less</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://3vin.pw/"/>
+  <updated>2017-02-16T05:08:06.029Z</updated>
+  <id>http://3vin.pw/</id>
+  
+  <author>
+    <name>Gahou</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用hexo搭建博客</title>
+    <link href="http://3vin.pw/2017/02/16/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://3vin.pw/2017/02/16/使用hexo搭建博客/</id>
+    <published>2017-02-15T16:09:38.000Z</published>
+    <updated>2017-02-16T05:08:06.029Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="配置环境（window环境下）"><a href="#配置环境（window环境下）" class="headerlink" title="配置环境（window环境下）"></a>配置环境（window环境下）<a id="more"></a></h4><ul>
+<li>安装Node</li>
+<li>安装Git</li>
+<li>申请GitHub</li>
+<li>安装HEXO <code>npm i -g hexo</code></li>
+<li>初始化 <code>hexo init</code></li>
+<li>生成静态页面 <code>hexo g</code></li>
+<li>本地启动 <code>hexo s</code></li>
+<li>浏览器输入 <code>http://localhost:4000</code><h4 id="配置github"><a href="#配置github" class="headerlink" title="配置github"></a>配置github</h4></li>
+<li>建立仓库，仓库名必须为 <code>用户名.github.io</code></li>
+<li>本地修改根目录的_config.yml文件，来建立关联</li>
+<li><ul>
+<li>在文件最下面，注意:后面有空格</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repository: https://github.com/用户名/用户名.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<h4 id="git部署"><a href="#git部署" class="headerlink" title="git部署"></a>git部署</h4><ul>
+<li>先下载 <code>npm i hexo-deployer-git -S</code></li>
+<li>执行配置命令 <code>hexo d</code></li>
+<li>每次部署的步骤，可按以下三步来进行</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
+<h4 id="将独立域名与GitHub-Pages的空间绑定"><a href="#将独立域名与GitHub-Pages的空间绑定" class="headerlink" title="将独立域名与GitHub Pages的空间绑定"></a>将独立域名与GitHub Pages的空间绑定</h4><ul>
+<li>在.deploy_git根目录下新建一个名为CNAME的文本文件，里面写入你要绑定的域名，比如XXX.com</li>
+<li>点击你的github的settings，拉到下面的custom domain，填入要绑定的域名</li>
+</ul>
+<h4 id="空间域名可以去主机屋搞，可以申请免费空间，再买个便宜的域名就可以了"><a href="#空间域名可以去主机屋搞，可以申请免费空间，再买个便宜的域名就可以了" class="headerlink" title="空间域名可以去主机屋搞，可以申请免费空间，再买个便宜的域名就可以了"></a>空间域名可以去主机屋搞，可以申请免费空间，再买个便宜的域名就可以了</h4><h4 id="DNS设置"><a href="#DNS设置" class="headerlink" title="DNS设置"></a>DNS设置</h4><ul>
+<li>主机记录@, 类型A, 记录值192.30.252.153</li>
+<li>主机记录www, 类型A, 记录值192.30.252.153</li>
+</ul>
+<h4 id="一些常用命令"><a href="#一些常用命令" class="headerlink" title="一些常用命令"></a>一些常用命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">hexo new <span class="string">"postName"</span> <span class="comment">#新建文章</span></div><div class="line">hexo new page <span class="string">"pageName"</span> <span class="comment">#新建页面</span></div><div class="line">hexo generate <span class="comment">#生成静态页面至public目录</span></div><div class="line">hexo server <span class="comment">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></div><div class="line">hexo deploy <span class="comment">#将.deploy目录部署到GitHub</span></div><div class="line">hexo <span class="built_in">help</span>  <span class="comment">#查看帮助</span></div><div class="line">hexo version  <span class="comment">#查看Hexo的版本</span></div></pre></td></tr></table></figure>
+<h4 id="让文章只显示一部分和一个阅读全文的按钮"><a href="#让文章只显示一部分和一个阅读全文的按钮" class="headerlink" title="让文章只显示一部分和一个阅读全文的按钮"></a>让文章只显示一部分和一个阅读全文的按钮</h4><pre><code>- 在文章中加一个&lt;!--more--&gt;，&lt;!--more--&gt;后面的内容就不会显示出来了
+</code></pre><h4 id="文章在source-posts中"><a href="#文章在source-posts中" class="headerlink" title="文章在source/_posts中"></a>文章在source/_posts中</h4><h4 id="添加评论功能"><a href="#添加评论功能" class="headerlink" title="添加评论功能"></a>添加评论功能</h4><ul>
+<li>打开多说首页，点我要安装，登陆多说，创建站点</li>
+<li>进入创建评论站点页面，记住你的站点</li>
+<li>创建完以后进入管理后台，按照指引操作代码</li>
+<li>在根目录下的配置文件添加<code>duoshuo_shortname: 刚才你创建的站点名</code></li>
+</ul>
+<h4 id="404页面"><a href="#404页面" class="headerlink" title="404页面"></a>404页面</h4><ul>
+<li>在<code>hexo/source</code>文件夹下新建404.html</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;配置环境（window环境下）&quot;&gt;&lt;a href=&quot;#配置环境（window环境下）&quot; class=&quot;headerlink&quot; title=&quot;配置环境（window环境下）&quot;&gt;&lt;/a&gt;配置环境（window环境下）
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://3vin.pw/2017/02/15/hello-world/"/>
+    <id>http://3vin.pw/2017/02/15/hello-world/</id>
+    <published>2017-02-15T12:47:08.175Z</published>
+    <updated>2017-02-16T05:39:39.987Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br><a id="more"></a></p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
