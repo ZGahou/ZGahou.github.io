@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://3vin.pw/"/>
-  <updated>2017-02-16T05:08:06.029Z</updated>
+  <updated>2017-02-16T07:34:41.659Z</updated>
   <id>http://3vin.pw/</id>
   
   <author>
@@ -16,23 +16,59 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>使用hexo搭建博客</title>
-    <link href="http://3vin.pw/2017/02/16/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://3vin.pw/2017/02/16/使用hexo搭建博客/</id>
-    <published>2017-02-15T16:09:38.000Z</published>
-    <updated>2017-02-16T05:08:06.029Z</updated>
+    <title>hexo next主题配置</title>
+    <link href="http://3vin.pw/2015/08/04/hexo-next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"/>
+    <id>http://3vin.pw/2015/08/04/hexo-next主题配置/</id>
+    <published>2015-08-04T07:08:59.000Z</published>
+    <updated>2017-02-16T07:34:41.659Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="配置环境（window环境下）"><a href="#配置环境（window环境下）" class="headerlink" title="配置环境（window环境下）"></a>配置环境（window环境下）<a id="more"></a></h4><ul>
-<li>安装Node</li>
-<li>安装Git</li>
+    <content type="html"><![CDATA[<h4 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h4><ul>
+<li>进入站点目录下<code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code><a id="more"></a>
+</li>
+</ul>
+<h4 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h4><ul>
+<li>修改站点配置文件<code>theme: next</code></li>
+</ul>
+<h4 id="修改主题配置文件"><a href="#修改主题配置文件" class="headerlink" title="修改主题配置文件"></a>修改主题配置文件</h4><ul>
+<li>选择Scheme，NexT支持三种Scheme：Muse，Mist，Pisces </li>
+<li>设置语言，简体中文<code>language: zh-Hans</code></li>
+<li>设置侧栏，修改sidebar.position的值</li>
+</ul>
+<p>####</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;下载主题&quot;&gt;&lt;a href=&quot;#下载主题&quot; class=&quot;headerlink&quot; title=&quot;下载主题&quot;&gt;&lt;/a&gt;下载主题&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;进入站点目录下&lt;code&gt;git clone https://github.com/iissnan/hexo-theme-next themes/next&lt;/code&gt;
+    
+    </summary>
+    
+    
+      <category term="blog" scheme="http://3vin.pw/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用hexo搭建博客</title>
+    <link href="http://3vin.pw/2015/08/04/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://3vin.pw/2015/08/04/使用hexo搭建博客/</id>
+    <published>2015-08-03T16:09:38.000Z</published>
+    <updated>2017-02-16T07:40:54.925Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="配置环境（window环境下）"><a href="#配置环境（window环境下）" class="headerlink" title="配置环境（window环境下）"></a>配置环境（window环境下）</h4><ul>
+<li>安装Node        <a id="more"></a></li>
+<li>安装Git     </li>
 <li>申请GitHub</li>
 <li>安装HEXO <code>npm i -g hexo</code></li>
 <li>初始化 <code>hexo init</code></li>
 <li>生成静态页面 <code>hexo g</code></li>
 <li>本地启动 <code>hexo s</code></li>
-<li>浏览器输入 <code>http://localhost:4000</code><h4 id="配置github"><a href="#配置github" class="headerlink" title="配置github"></a>配置github</h4></li>
+<li>浏览器输入 <code>http://localhost:4000</code></li>
+</ul>
+<h4 id="配置github"><a href="#配置github" class="headerlink" title="配置github"></a>配置github</h4><ul>
 <li>建立仓库，仓库名必须为 <code>用户名.github.io</code></li>
-<li>本地修改根目录的_config.yml文件，来建立关联</li>
+<li>修改本地根目录的_config.yml文件（站点配置文件），来建立关联</li>
 <li><ul>
 <li>在文件最下面，注意:后面有空格</li>
 </ul>
@@ -68,37 +104,13 @@
     
     <summary type="html">
     
-      &lt;h4 id=&quot;配置环境（window环境下）&quot;&gt;&lt;a href=&quot;#配置环境（window环境下）&quot; class=&quot;headerlink&quot; title=&quot;配置环境（window环境下）&quot;&gt;&lt;/a&gt;配置环境（window环境下）
+      &lt;h4 id=&quot;配置环境（window环境下）&quot;&gt;&lt;a href=&quot;#配置环境（window环境下）&quot; class=&quot;headerlink&quot; title=&quot;配置环境（window环境下）&quot;&gt;&lt;/a&gt;配置环境（window环境下）&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;安装Node
     
     </summary>
     
     
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://3vin.pw/2017/02/15/hello-world/"/>
-    <id>http://3vin.pw/2017/02/15/hello-world/</id>
-    <published>2017-02-15T12:47:08.175Z</published>
-    <updated>2017-02-16T05:39:39.987Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br><a id="more"></a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;br&gt;
-    
-    </summary>
-    
+      <category term="blog" scheme="http://3vin.pw/tags/blog/"/>
     
   </entry>
   
